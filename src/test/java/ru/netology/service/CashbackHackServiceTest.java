@@ -7,7 +7,11 @@ import static org.testng.Assert.*;
 public class CashbackHackServiceTest {
     private final CashbackHackService service = new CashbackHackService();
 
-
+    @Test
+    public void exactBoundary() {
+        // amount = 1000 → остаток 0 (граница достигнута)
+        assertEquals(service.remain(1000), 0);
+    }
 
     @Test
     public void belowBoundary() {
