@@ -7,7 +7,14 @@
 
 name: Java CI with Gradle
 
-on: [push, pull_request]
+# Обновлённый код для запуска CI на всех ветках
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   build:
